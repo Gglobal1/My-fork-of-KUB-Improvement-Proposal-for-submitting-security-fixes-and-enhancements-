@@ -1,0 +1,27 @@
+## Summary
+This PR adds a new KIP proposing the integration of reentrancy protection into the KAP-20 token standard.  
+It introduces a `nonReentrant` modifier and follows the Checks-Effects-Interactions pattern to prevent malicious re-entry calls during token operations.
+
+## Motivation
+Reentrancy vulnerabilities have been exploited in multiple high-profile attacks across blockchain platforms, resulting in significant losses. This proposal strengthens KAP-20 security, protects user funds, and aligns the standard with industry best practices.
+
+## Changes
+- Adds KIP-XXX markdown file in the KIPs folder.
+- Outlines technical approach, rationale, and backward compatibility.
+- Includes example Solidity code for easy adoption.
+
+## Impact
+- **Security:** Significantly reduces risk of reentrancy-based attacks.
+- **Backward Compatibility:** Fully compatible with existing KAP-20 implementations.
+- **Developer Guidance:** Clear reference implementation and recommended usage.
+
+## References
+- [KAP-20 Token Standard Documentation](link-to-KAP-20-docs)
+- [OpenZeppelin ReentrancyGuard](https://docs.openzeppelin.com/contracts/4.x/api/security#ReentrancyGuard)
+
+---
+
+**Reviewer Checklist**
+- [ ] Review scope of functions covered
+- [ ] Validate compatibility with existing KAP-20 contracts
+- [ ] Confirm no breaking changes
